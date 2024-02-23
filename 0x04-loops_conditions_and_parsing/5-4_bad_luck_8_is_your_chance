@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-# echo best school ten times0
+o best school ten times0
 i=0
 while [ $i -lt 10 ]
 do
