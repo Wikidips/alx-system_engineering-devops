@@ -1,0 +1,23 @@
+teboard URL :  https://drive.google.com/file/d/1OjVqslVcGFKrbJrfVzcGAey8ZDqkF2T4/view?usp=sharing
+   
+extra essentiel Components:
+- Three Firewalls for security
+- SSL Certificate for encrypted communication
+- Three Monitoring Clients for performance data
+
+Firewalls for:
+- Blocking unauthorized access and cyber threats
+
+Traffic served over HTTPS for:
+- Protecting user data from attacks
+
+Monitoring used for:
+- Early detection of performance issues and security incidents
+
+Monitoring tool collecting data:
+- Tracks web server metrics like QPS
+
+Issues with Infrastructure:
+- SSL Termination at Load Balancer exposes decrypted traffic
+- Single Point of Failure at Database Primary node
+- Same components on each server can lead to inefficiency
