@@ -1,0 +1,8 @@
+ whiteboard URL   : https://drive.google.com/file/d/1LIubmoyxXXx6LwOogWDfoB-4aw4WNaO1/view?usp=sharing
+
+ essential elements : 
+1. Improved infrastructure with additional server and load balancer for better performance, scalability, and redundancy.
+2. HAproxy with Round Robin for load balancing and active-active/passive setup for optimal performance and failover.
+3. Database setup with Primary (Master) for writes and Replica (Slave) for reads and failover.
+4. App writes to Primary node; reads can use Primary or Replica for better performance and redundancy.
+5. Issues: Single Point of Failure with primary database, security risks due to lack of firewall and HTTPS, and monitoring challenges.
