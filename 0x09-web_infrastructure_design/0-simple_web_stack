@@ -1,0 +1,9 @@
+https://drive.google.com/file/d/1LIubmoyxXXx6LwOogWDfoB-4aw4WNaO1/view?usp=sharing
+
+essential components : 
+Server: A powerful computer that hosts our website. 
+Web Server (Nginx): Software that manages user requests and serves web pages. 
+Application Server: Software that processes code to create dynamic website content. 
+Application Files (Codebase): Collection of code files that define website functionality.
+ Database (MySQL): Software that stores website data.
+ Domain Name (foobar.com): User-friendly name for the website. "www" DNS Record: Points to the server's IP address (A record).
