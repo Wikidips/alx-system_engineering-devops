@@ -7,3 +7,12 @@ whiteboard URL : https://drive.google.com/file/d/1LIubmoyxXXx6LwOogWDfoB-4aw4WNa
 4. Application Files (Codebase): Collection of code files that define website functionality.
  5. Database (MySQL): Software that stores website data.
  6 .Domain Name (foobar.com): User-friendly name for the website. "www" DNS Record: Points to the server's IP address (A record).
+
+Issues with this Infrastructure:
+
+1 - Single Point of Failure (SPOF): Everything relies on one server.
+    If the server crashes, the website goes down.
+2 - Downtime during Maintenance: Restarting the web server
+    (e.g., deploying new code) can cause temporary downtimefor the website.
+3 - Limited Scalability: This setup struggles with high traffic volumes.
+    The single server might not be able to handle a surge in user requests.
