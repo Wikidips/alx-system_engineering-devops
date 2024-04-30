@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# Script to configure Nginx server with a custom header
+sudo apt-get update
+sudo apt-get install -y nginx
+
+sudo mkdir -p /etc/nginx/html
+sudo tee /etc/nginx/html/index.html <<< "Hello World!"
+sudo tee /etc/nginx/html/404.html <<< "Ceci n'est pas une page"
+
+cat << EOF | sudo tee /etc/nginx/sites-available/default
+server {
+    listen 80;
+    listen [::]:80 default_server;
+    add_header X-Served-By \$HOSTNAME;
+    root /etc/nginx/html;
+    index index.html index.htm;
+    location /redirect_me {
+        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+    }
+    error_page 404 /404.html;
+    location /404 {
+        root /etc/nginx/html;
+        internal;
+    }
+}
+EOF
+
+sudo systemctl restart nginx
