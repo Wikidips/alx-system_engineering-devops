@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Script to display information about subdomains.
+
+dns_config() {
+    script=$(dig +short "$2"."$1")
+    echo "The subdomain $2 is a $(dig +short "$2"."$1" TXT) record and points to $script"
+}
+
+if [ "$#" -eq 1 ]; then
+    dns_config "$1" "www"
+    dns_config "$1" "lb-01"
+    dns_config "$1" "web-01"
+    dns_config "$1" "web-02"
+elif [ "$#" -eq 2 ]; then
+    dns_config "$1" "$2"
+fi
